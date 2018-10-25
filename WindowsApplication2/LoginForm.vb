@@ -10,6 +10,19 @@ Public Class LoginForm
         Dim adapt As OleDbDataAdapter
         Dim dt As DataTable
         Dim passRow As DataRow
+
+        If user = "" Then
+            MsgBox("Please Enter Username")
+            TextBox1.Focus()
+            Exit Sub
+        End If
+
+        If pass = "" Then
+            MsgBox("Please Enter Password")
+            TextBox2.Focus()
+            Exit Sub
+        End If
+
         Try
             adapt = New OleDbDataAdapter("select passwd from users where username='" & user & "'", con)
             dt = New DataTable
@@ -17,19 +30,17 @@ Public Class LoginForm
             ComboBox1.DataSource = dt
             ComboBox1.DisplayMember = "passwd"
             pass1 = ComboBox1.Text
-            Label5.Text = pass1
             If (pass = pass1) Then
+                MsgBox("Login Successful")
                 ShowPackageForm.Show()
+            Else
+                MsgBox("Passwords Dont Match")
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
 
         End Try
-        If ((user = "poo") And (pass = "poo")) Then
-            ShowPackageForm.Show()
-        Else
-            MsgBox("Invalid User")
-        End If
+        
     End Sub
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
@@ -39,6 +50,7 @@ Public Class LoginForm
 
     Private Sub LoginForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         connect()
-        AcceptButton = Button2
+        AcceptButton = Button1
+        TextBox1.Focus()
     End Sub
 End Class

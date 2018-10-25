@@ -1,4 +1,6 @@
-﻿Public Class RegisterForm
+﻿Imports System.Data.OleDb
+
+Public Class RegisterForm
 
     Private Sub RegisterForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
@@ -24,7 +26,59 @@
         pass = TextBox6.Text().ToString()
         cpass = TextBox7.Text().ToString()
 
+        If Trim(TextBox1.Text) = "" Then
+            MsgBox("Please Enter Your Name")
+            TextBox1.Focus()
+            Exit Sub
+        End If
 
+        If Trim(TextBox2.Text) = "" Then
+            MsgBox("Please Enter Your Age")
+            TextBox2.Focus()
+            Exit Sub
+        End If
+
+        If Trim(TextBox3.Text) = "" Then
+            MsgBox("Please Enter Your City Name")
+            TextBox3.Focus()
+            Exit Sub
+        End If
+
+        If Trim(TextBox4.Text) = "" Then
+            MsgBox("Please Enter Your Mobile Number")
+            TextBox4.Focus()
+            Exit Sub
+        End If
+
+        If Trim(TextBox5.Text) = "" Then
+            MsgBox("Please Enter Desired Username")
+            TextBox5.Focus()
+            Exit Sub
+        End If
+
+        If Trim(TextBox6.Text) = "" Then
+            MsgBox("Please Enter Desired Password")
+            TextBox6.Focus()
+            Exit Sub
+        End If
+
+        If Trim(TextBox7.Text) = "" Then
+            MsgBox("Please Confirm Desired Password")
+            TextBox7.Focus()
+            Exit Sub
+        End If
+
+        If Trim(TextBox7.Text) = "" Then
+            MsgBox("Please Confirm Desired Password")
+            TextBox7.Focus()
+            Exit Sub
+        End If
+
+        If Trim(TextBox7.Text) = Trim(TextBox6.Text) Then
+            MsgBox("Passwords Dont Match")
+            TextBox7.Focus()
+            Exit Sub
+        End If
 
     End Sub
 
