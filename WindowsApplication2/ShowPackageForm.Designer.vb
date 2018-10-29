@@ -98,7 +98,7 @@ Partial Class ShowPackageForm
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Submit"
+        Me.Button1.Text = "NEXT"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ShowPackageForm

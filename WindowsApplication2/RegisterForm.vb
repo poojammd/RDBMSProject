@@ -14,7 +14,7 @@ Public Class RegisterForm
         Dim age As String = Trim(TextBox2.Text)
         Dim city As String = Trim(TextBox3.Text)
         Dim mob As String = Trim(TextBox4.Text)
-        Dim user As String = Trim(TextBox5.Text)
+        Dim usern As String = Trim(TextBox5.Text)
         Dim pass As String = Trim(TextBox6.Text)
         Dim cpass As String = Trim(TextBox7.Text)
 
@@ -22,7 +22,7 @@ Public Class RegisterForm
         age = TextBox2.Text().ToString()
         city = TextBox3.Text().ToString()
         mob = TextBox4.Text().ToString()
-        user = TextBox5.Text().ToString()
+        usern = TextBox5.Text().ToString()
         pass = TextBox6.Text().ToString()
         cpass = TextBox7.Text().ToString()
 
@@ -68,11 +68,7 @@ Public Class RegisterForm
             Exit Sub
         End If
 
-        If Trim(TextBox7.Text) = "" Then
-            MsgBox("Please Confirm Desired Password")
-            TextBox7.Focus()
-            Exit Sub
-        End If
+       
 
         If Trim(TextBox7.Text) = Trim(TextBox6.Text) Then
             MsgBox("Passwords Dont Match")
@@ -80,9 +76,35 @@ Public Class RegisterForm
             Exit Sub
         End If
 
+        If Not IsNumeric(TextBox2.Text) Then
+            MsgBox("Enter integer value for age ")
+            TextBox2.Focus()
+            TextBox2.SelectAll()
+            Exit Sub
+        End If
+        If Not IsNumeric(TextBox4.Text) Then
+            MsgBox("Enter integer value for mobilenumber ")
+            TextBox4.Focus()
+            TextBox4.SelectAll()
+            Exit Sub
+        End If
+
+        Dim com As OleDbCommand
+        Try
+            com = New OleDbCommand()
+            com.Connection = con
+            com.CommandText = "insert into users values('" & usern & "','" & pass & "'," & age & ",'" & city & "'," & mob & ")"
+            com.ExecuteNonQuery()
+            MsgBox("Registered Succesfully")
+            Me.Close()
+            LoginForm.Show()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+
+
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
+   
 End Class
