@@ -45,7 +45,6 @@ Partial Class ShowPackageForm
         '
         Me.range1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.range1.FormattingEnabled = True
-        Me.range1.Items.AddRange(New Object() {"5000-10000 /5 nights,6days", "10000-20000 /10 nights,11 days", "20000-30000 /20 nights,21days"})
         Me.range1.Location = New System.Drawing.Point(113, 46)
         Me.range1.Name = "range1"
         Me.range1.Size = New System.Drawing.Size(150, 28)
@@ -65,7 +64,6 @@ Partial Class ShowPackageForm
         '
         Me.city1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.city1.FormattingEnabled = True
-        Me.city1.Items.AddRange(New Object() {"Bangalore", "Mangalore", "Chennai", "Mumbai", "Delhi", "Kolkata", ""})
         Me.city1.Location = New System.Drawing.Point(113, 95)
         Me.city1.Name = "city1"
         Me.city1.Size = New System.Drawing.Size(150, 28)
