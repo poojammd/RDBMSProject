@@ -16,6 +16,6 @@ insert into  packages values('P06','Package6',7500,'kerala',6)
 insert into  packages values('P07','Package7',8000,'abc',6)
 select * from packages 
 
-
+123
 
 drop table users

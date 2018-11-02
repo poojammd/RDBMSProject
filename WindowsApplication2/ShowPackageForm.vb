@@ -22,10 +22,11 @@ Public Class ShowPackageForm
         Days = Days1.Text().ToString()
 
         Try
-            adapt = New OleDbDataAdapter("select city from packages ", con)
+            adapt = New OleDbDataAdapter("select city, from packages ", con)
             dt = New DataTable
             adapt.Fill(dt)
-            'range1.DataSource = dt
+            range1.DataSource = dt
+            range1.DisplayMember = "city"
 
             city1.DataSource = dt
             city1.DisplayMember = "city"
