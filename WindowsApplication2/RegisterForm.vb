@@ -7,8 +7,7 @@ Public Class RegisterForm
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Me.Close()
-        LoginForm.Show()
+        
         Dim name As String = Trim(TextBox1.Text)
 
         Dim age As String = Trim(TextBox2.Text)
@@ -70,7 +69,7 @@ Public Class RegisterForm
 
        
 
-        If Trim(TextBox7.Text) = Trim(TextBox6.Text) Then
+        If Not Trim(TextBox7.Text) = Trim(TextBox6.Text) Then
             MsgBox("Passwords Dont Match")
             TextBox7.Focus()
             Exit Sub
@@ -82,8 +81,9 @@ Public Class RegisterForm
             TextBox2.SelectAll()
             Exit Sub
         End If
+
         If Not IsNumeric(TextBox4.Text) Then
-            MsgBox("Enter integer value for mobilenumber ")
+            MsgBox("Enter integer value for mobile number ")
             TextBox4.Focus()
             TextBox4.SelectAll()
             Exit Sub
