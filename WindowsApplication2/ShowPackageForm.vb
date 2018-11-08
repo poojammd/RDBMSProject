@@ -7,8 +7,12 @@ Public Class ShowPackageForm
         Dim Days As String = Trim(DaysCombo.Text)
         SelectCity = city
         'MsgBox(SelectCity)
-        Me.Close()
+        If RadioButton1.Checked Then
+
+        End If
         SelectPackageByCity.Show()
+        Me.Close()
+
 
 
     End Sub

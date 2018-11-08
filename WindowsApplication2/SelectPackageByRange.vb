@@ -1,10 +1,10 @@
 ﻿Imports System.Data.OleDb
 
-Public Class SelectPackageByCity
+Public Class SelectPackageByRange
     Dim adapt, adapt1 As OleDbDataAdapter
     Dim dt, dt1 As DataTable
     Private Sub SelectPackageByCity_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        
+
         adapt = New OleDbDataAdapter("select distinct city from packages order by city", con)
         dt = New DataTable
         adapt.Fill(dt)
