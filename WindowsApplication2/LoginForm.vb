@@ -35,9 +35,12 @@ Public Class LoginForm
             pass1 = ComboBox1.Text
             If (pass = pass1) Then
                 MsgBox("Login Successful")
+                LoggedUser = user
                 ShowPackageForm.Show()
+
             Else
                 MsgBox("Invalid Credentials")
+                LoggedUser = ""
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

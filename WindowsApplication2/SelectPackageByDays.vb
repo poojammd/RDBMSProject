@@ -1,19 +1,21 @@
 ﻿Imports System.Data.OleDb
 
-Public Class SelectPackageByCity
+Public Class SelectPackageByDays
     Dim adapt, adapt1 As OleDbDataAdapter
     Dim dt, dt1 As DataTable
-    Private Sub SelectPackageByCity_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'MsgBox("CityPackage Loaded")
-        adapt = New OleDbDataAdapter("select distinct city from packages order by city", con)
+    Private Sub SelectPackageByDays_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'MsgBox("Form Load : " + SelectDays)
+        DaysSelectCombo.Text = SelectDays
+        ' MsgBox("Opening Days Package")
+        adapt = New OleDbDataAdapter("select distinct noofdays as days from packages order by days", con)
         dt = New DataTable
         adapt.Fill(dt)
-        CitySelectCombo.DataSource = dt
-        CitySelectCombo.DisplayMember = "city"
-        CitySelectCombo.Text = SelectCity
-        'MsgBox(SelectCity)
+        DaysSelectCombo.DataSource = dt
+        DaysSelectCombo.DisplayMember = "days"
+        DaysSelectCombo.Text = SelectDays
+
         Try
-            adapt1 = New OleDbDataAdapter("select * from packages where city = '" & SelectCity & "' ", con)
+            adapt1 = New OleDbDataAdapter("select * from packages where noofdays = '" & SelectDays & "' ", con)
             dt1 = New DataTable
             adapt1.Fill(dt1)
             DataGridView1.DataSource = dt1
@@ -24,15 +26,15 @@ Public Class SelectPackageByCity
 
     End Sub
 
-    Private Sub CitySelectCombo_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles CitySelectCombo.SelectedIndexChanged
-        'MsgBox("CityComboChanged")
+    Private Sub DaysSelectCombo_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles DaysSelectCombo.SelectedIndexChanged
+        ' MsgBox("Index Changed : " + DaysSelectCombo.Text)
         Try
-            adapt1 = New OleDbDataAdapter("select * from packages where city = '" & CitySelectCombo.Text & "'", con)
+            adapt1 = New OleDbDataAdapter("select * from packages where noofdays = '" & DaysSelectCombo.Text & "'", con)
             dt1 = New DataTable
             adapt1.Fill(dt1)
             DataGridView1.DataSource = dt1
         Catch ex As Exception
-            MsgBox(ex.Message)
+            ' MsgBox("DaysComboChange Error : " + ex.Message)
         End Try
     End Sub
 
@@ -45,10 +47,5 @@ Public Class SelectPackageByCity
         Else
             MsgBox("Please Select A Package")
         End If
-    End Sub
-
-    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
-        Me.Close()
-        ShowPackageForm.Show()
     End Sub
 End Class

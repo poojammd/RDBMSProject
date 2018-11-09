@@ -2,16 +2,21 @@
 Public Class ShowPackageForm
     Public city As String
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        Dim range As String = Trim(RangeCombo.Text)
-        city = Trim(CityCombo.Text)
+
         Dim Days As String = Trim(DaysCombo.Text)
-        SelectCity = city
+        SelectCity = Trim(CityCombo.Text)
+        SelectRange = Trim(RangeCombo.Text)
+        SelectDays = Trim(DaysCombo.Text)
         'MsgBox(SelectCity)
         If RadioButton1.Checked Then
-
+            SelectPackageByRange.Show()
+        ElseIf RadioButton2.Checked Then
+            SelectPackageByCity.Show()
+        ElseIf RadioButton3.Checked Then
+            SelectPackageByDays.Show()
         End If
-        SelectPackageByCity.Show()
-        Me.Close()
+
+        Me.Hide()
 
 
 

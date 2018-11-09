@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Module Module1
     Public con As OleDbConnection
-    Public SelectCity, SelectRange, SelectDays As String
+    Public SelectCity, SelectRange, SelectDays, SelectPackage, LoggedUser As String
     Public Function connect()
         Try
             con = New OleDbConnection("Provider=SQLOLEDB;server=localhost;database=travel;Integrated Security=SSPI")

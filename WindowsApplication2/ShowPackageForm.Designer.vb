@@ -28,9 +28,9 @@ Partial Class ShowPackageForm
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.CityCombo = New System.Windows.Forms.ComboBox()
-        Me.DaysCombo = New System.Windows.Forms.ComboBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.DaysCombo = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -112,17 +112,6 @@ Partial Class ShowPackageForm
         Me.CityCombo.Size = New System.Drawing.Size(175, 33)
         Me.CityCombo.TabIndex = 6
         '
-        'DaysCombo
-        '
-        Me.DaysCombo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DaysCombo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DaysCombo.FormattingEnabled = True
-        Me.DaysCombo.Location = New System.Drawing.Point(125, 90)
-        Me.DaysCombo.Margin = New System.Windows.Forms.Padding(4)
-        Me.DaysCombo.Name = "DaysCombo"
-        Me.DaysCombo.Size = New System.Drawing.Size(175, 33)
-        Me.DaysCombo.TabIndex = 8
-        '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
@@ -149,6 +138,17 @@ Partial Class ShowPackageForm
         Me.RadioButton1.Text = "Range"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
+        'DaysCombo
+        '
+        Me.DaysCombo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DaysCombo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DaysCombo.FormattingEnabled = True
+        Me.DaysCombo.Location = New System.Drawing.Point(125, 90)
+        Me.DaysCombo.Margin = New System.Windows.Forms.Padding(4)
+        Me.DaysCombo.Name = "DaysCombo"
+        Me.DaysCombo.Size = New System.Drawing.Size(175, 33)
+        Me.DaysCombo.TabIndex = 8
+        '
         'ShowPackageForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -159,6 +159,7 @@ Partial Class ShowPackageForm
         Me.Controls.Add(Me.Button1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ShowPackageForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ShowPackage"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()

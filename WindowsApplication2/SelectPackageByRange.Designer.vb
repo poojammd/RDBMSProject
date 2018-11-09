@@ -22,11 +22,14 @@ Partial Class SelectPackageByRange
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.CitySelectCombo = New System.Windows.Forms.ComboBox()
+        Me.RangeSelectCombo = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,22 +40,22 @@ Partial Class SelectPackageByRange
         Me.Label3.Location = New System.Drawing.Point(221, 29)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(346, 30)
+        Me.Label3.Size = New System.Drawing.Size(377, 30)
         Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Displaying Packages By City"
+        Me.Label3.Text = "Displaying Packages By Range"
         '
-        'CitySelectCombo
+        'RangeSelectCombo
         '
-        Me.CitySelectCombo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.RangeSelectCombo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CitySelectCombo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CitySelectCombo.FormattingEnabled = True
-        Me.CitySelectCombo.Location = New System.Drawing.Point(365, 88)
-        Me.CitySelectCombo.Margin = New System.Windows.Forms.Padding(4)
-        Me.CitySelectCombo.Name = "CitySelectCombo"
-        Me.CitySelectCombo.Size = New System.Drawing.Size(392, 33)
-        Me.CitySelectCombo.TabIndex = 10
+        Me.RangeSelectCombo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RangeSelectCombo.FormattingEnabled = True
+        Me.RangeSelectCombo.Location = New System.Drawing.Point(483, 88)
+        Me.RangeSelectCombo.Margin = New System.Windows.Forms.Padding(4)
+        Me.RangeSelectCombo.Name = "RangeSelectCombo"
+        Me.RangeSelectCombo.Size = New System.Drawing.Size(274, 33)
+        Me.RangeSelectCombo.TabIndex = 10
         '
         'Label1
         '
@@ -61,13 +64,29 @@ Partial Class SelectPackageByRange
         Me.Label1.Location = New System.Drawing.Point(26, 95)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(253, 20)
+        Me.Label1.Size = New System.Drawing.Size(385, 20)
         Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Showing All Packages for City :"
+        Me.Label1.Text = "Showing All Packages for selected Price Range :"
         '
         'DataGridView1
         '
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.Location = New System.Drawing.Point(30, 135)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
@@ -86,17 +105,30 @@ Partial Class SelectPackageByRange
         Me.Button1.Text = "Book Package"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'SelectPackageByCity
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(312, 375)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(164, 41)
+        Me.Button2.TabIndex = 15
+        Me.Button2.Text = "Back to Menu"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'SelectPackageByRange
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 410)
+        Me.ClientSize = New System.Drawing.Size(800, 446)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.CitySelectCombo)
+        Me.Controls.Add(Me.RangeSelectCombo)
         Me.Controls.Add(Me.Label3)
-        Me.Name = "SelectPackageByCity"
+        Me.Name = "SelectPackageByRange"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Select Package"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -105,8 +137,9 @@ Partial Class SelectPackageByRange
 
     End Sub
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents CitySelectCombo As System.Windows.Forms.ComboBox
+    Friend WithEvents RangeSelectCombo As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
