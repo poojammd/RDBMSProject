@@ -15,6 +15,14 @@ WindowsApplication2
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:WindowsApplication2.My.Resources.Resources._2826ad3fb9aaf5e4ca2cbd41b65dfc59">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:WindowsApplication2.My.Resources.Resources.MYw3o4">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="T:WindowsApplication2.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.

@@ -23,6 +23,7 @@ Public Class SelectPackageByDays
             MsgBox("Load Date Error : " + ex.Message)
         End Try
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DataGridView1.ReadOnly = True
 
     End Sub
 
@@ -43,9 +44,21 @@ Public Class SelectPackageByDays
             Dim selectedRow As DataGridViewRow
             selectedRow = DataGridView1.SelectedRows(0)
             SelectPackage = selectedRow.Cells(0).Value.ToString
+            sPid = selectedRow.Cells(0).Value.ToString
+            sPname = selectedRow.Cells(1).Value.ToString
+            sPrice = selectedRow.Cells(2).Value.ToString
+            sCity = selectedRow.Cells(3).Value.ToString
+            sDays = selectedRow.Cells(4).Value.ToString
             MsgBox("Selected Package ID is " + SelectPackage)
+            Me.Close()
+            BookPackage.Show()
         Else
             MsgBox("Please Select A Package")
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        Me.Close()
+        ShowPackageForm.Show()
     End Sub
 End Class

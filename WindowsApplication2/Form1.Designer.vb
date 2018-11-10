@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,13 +24,13 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'Form3
+        'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Name = "Form3"
-        Me.Text = "ModifyPackage"
+        Me.ClientSize = New System.Drawing.Size(622, 406)
+        Me.Name = "Form1"
+        Me.Text = "Man"
         Me.ResumeLayout(False)
 
     End Sub

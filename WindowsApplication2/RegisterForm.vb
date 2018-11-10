@@ -6,8 +6,8 @@ Public Class RegisterForm
 
     End Sub
 
-    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-        
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+
         Dim name As String = Trim(TextBox1.Text)
 
         Dim age As String = Trim(TextBox2.Text)
@@ -17,13 +17,13 @@ Public Class RegisterForm
         Dim pass As String = Trim(TextBox6.Text)
         Dim cpass As String = Trim(TextBox7.Text)
 
-        name = TextBox1.Text().ToString()
-        age = TextBox2.Text().ToString()
-        city = TextBox3.Text().ToString()
-        mob = TextBox4.Text().ToString()
-        usern = TextBox5.Text().ToString()
-        pass = TextBox6.Text().ToString()
-        cpass = TextBox7.Text().ToString()
+        ' name = TextBox1.Text().ToString()
+        ' age = TextBox2.Text().ToString()
+        ' city = TextBox3.Text().ToString()
+        '  mob = TextBox4.Text().ToString()
+        '  usern = TextBox5.Text().ToString()
+        ' pass = TextBox6.Text().ToString()
+        ' cpass = TextBox7.Text().ToString()
 
         If Trim(TextBox1.Text) = "" Then
             MsgBox("Please Enter Your Name")
@@ -67,7 +67,7 @@ Public Class RegisterForm
             Exit Sub
         End If
 
-       
+
 
         If Not Trim(TextBox7.Text) = Trim(TextBox6.Text) Then
             MsgBox("Passwords Dont Match")
@@ -93,7 +93,7 @@ Public Class RegisterForm
         Try
             com = New OleDbCommand()
             com.Connection = con
-            com.CommandText = "insert into users values('" & usern & "','" & pass & "'," & age & ",'" & city & "'," & mob & ")"
+            com.CommandText = "insert into users values('" & usern & "','" & pass & "'," & name & "','" & age & ",'" & city & "'," & mob & ")"
             com.ExecuteNonQuery()
             MsgBox("Registered Succesfully")
             Me.Close()
@@ -102,9 +102,10 @@ Public Class RegisterForm
             MsgBox(ex.Message)
 
         End Try
-
-
     End Sub
 
-   
+    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
+        Me.Close()
+        LoginForm.Show()
+    End Sub
 End Class

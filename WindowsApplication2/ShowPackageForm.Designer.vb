@@ -31,6 +31,7 @@ Partial Class ShowPackageForm
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.DaysCombo = New System.Windows.Forms.ComboBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -149,11 +150,24 @@ Partial Class ShowPackageForm
         Me.DaysCombo.Size = New System.Drawing.Size(175, 33)
         Me.DaysCombo.TabIndex = 8
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(104, 261)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(159, 41)
+        Me.Button2.TabIndex = 15
+        Me.Button2.Text = "Back to Menu"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'ShowPackageForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(379, 282)
+        Me.ClientSize = New System.Drawing.Size(379, 307)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button1)
@@ -176,4 +190,5 @@ Partial Class ShowPackageForm
     Friend WithEvents DaysCombo As System.Windows.Forms.ComboBox
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

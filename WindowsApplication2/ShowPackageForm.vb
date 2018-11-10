@@ -80,4 +80,9 @@ Public Class ShowPackageForm
             DaysCombo.Enabled = False
         End If
     End Sub
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        Me.Close()
+        WelcomePage.Show()
+    End Sub
 End Class

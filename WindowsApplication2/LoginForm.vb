@@ -5,14 +5,11 @@ Public Class LoginForm
         
         Dim user As String = Trim(TextBox1.Text)
         Dim pass As String = Trim(TextBox2.Text)
-        Dim pass1 As String
+        Dim pass1, uname As String
         user = TextBox1.Text().ToString()
         pass = TextBox2.Text().ToString()
         Dim adapt As OleDbDataAdapter
         Dim dt As DataTable
-        Dim dt2 As DataTable
-        dt2 = New DataTable
-        ComboBox1.DataSource = dt2
 
         If user = "" Then
             MsgBox("Please Enter Username")
@@ -27,20 +24,22 @@ Public Class LoginForm
         End If
 
         Try
-            adapt = New OleDbDataAdapter("select pass from users where usern = '" & user & "'", con)
+            adapt = New OleDbDataAdapter("select pass,name from users where usern = '" & user & "'", con)
             dt = New DataTable
             adapt.Fill(dt)
-            ComboBox1.DataSource = dt
-            ComboBox1.DisplayMember = "pass"
-            pass1 = ComboBox1.Text
+            pass1 = dt.Rows(0).Item(0)
+            uname = dt.Rows(0).Item(1)
             If (pass = pass1) Then
                 MsgBox("Login Successful")
                 LoggedUser = user
-                ShowPackageForm.Show()
+                LoggedName = uname
+                WelcomePage.Show()
+                Me.Hide()
 
             Else
                 MsgBox("Invalid Credentials")
                 LoggedUser = ""
+                LoggedName = ""
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

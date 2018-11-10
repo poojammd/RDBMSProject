@@ -84,16 +84,28 @@
     <Compile Include="Admincontrol.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomePage.Designer.vb">
+      <DependentUpon>WelcomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SelectPackageByCity.Designer.vb">
       <DependentUpon>SelectPackageByCity.vb</DependentUpon>
     </Compile>
     <Compile Include="SelectPackageByCity.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModifyBookedPackage.Designer.vb">
-      <DependentUpon>ModifyBookedPackage.vb</DependentUpon>
+    <Compile Include="ModifyBooking.Designer.vb">
+      <DependentUpon>ModifyBooking.vb</DependentUpon>
     </Compile>
-    <Compile Include="ModifyBookedPackage.vb">
+    <Compile Include="ModifyBooking.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
@@ -151,14 +163,20 @@
     <EmbeddedResource Include="BookPackage.resx">
       <DependentUpon>BookPackage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomePage.resx">
+      <DependentUpon>WelcomePage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectPackageByCity.resx">
       <DependentUpon>SelectPackageByCity.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModifyBookedPackage.resx">
-      <DependentUpon>ModifyBookedPackage.vb</DependentUpon>
+    <EmbeddedResource Include="ModifyBooking.resx">
+      <DependentUpon>ModifyBooking.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -189,6 +207,12 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MYw3o4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2826ad3fb9aaf5e4ca2cbd41b65dfc59.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
