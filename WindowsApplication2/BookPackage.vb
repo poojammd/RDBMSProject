@@ -49,4 +49,12 @@ Public Class BookPackage
 
         End Try
     End Sub
+
+    Private Sub Label2_Click(sender As System.Object, e As System.EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Label10_Click(sender As System.Object, e As System.EventArgs) Handles Label10.Click
+
+    End Sub
 End Class

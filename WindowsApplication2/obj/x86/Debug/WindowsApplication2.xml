@@ -19,6 +19,14 @@ WindowsApplication2
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:WindowsApplication2.My.Resources.Resources.images">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:WindowsApplication2.My.Resources.Resources.images__1_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:WindowsApplication2.My.Resources.Resources.MYw3o4">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

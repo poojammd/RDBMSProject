@@ -93,7 +93,7 @@ Public Class RegisterForm
         Try
             com = New OleDbCommand()
             com.Connection = con
-            com.CommandText = "insert into users values('" & usern & "','" & pass & "'," & name & "','" & age & ",'" & city & "'," & mob & ")"
+            com.CommandText = "insert into users values('" & usern & "','" & pass & "','" & name & "'," & age & ",'" & city & "'," & mob & ")"
             com.ExecuteNonQuery()
             MsgBox("Registered Succesfully")
             Me.Close()

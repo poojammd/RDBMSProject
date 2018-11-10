@@ -87,4 +87,7 @@ Public Class ModifyBooking
         End If
     End Sub
 
+    Private Sub Welcome_Click(sender As System.Object, e As System.EventArgs) Handles Welcome.Click
+
+    End Sub
 End Class
